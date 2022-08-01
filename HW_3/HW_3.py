@@ -3,7 +3,7 @@
 
 from function import int_list_creation
 
-num = int(input('Введите число = длине списка - '))
+num = int(input('Enter a number equal to the length of the list: '))
 
 
 def sum_of_odd_position(data: list):
@@ -16,14 +16,13 @@ def sum_of_odd_position(data: list):
 
 spisok = int_list_creation(num)
 print(spisok)
-print('Сумма элементов, стоящих на нечетных позициях =',
-      sum_of_odd_position(spisok))
+print('Sum of elements in odd positions = ', sum_of_odd_position(spisok))
 
 # 2. Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 # Пример: [2, 3, 4, 5, 6] => [12, 15, 16]; (4 возвести в квадрат)
 
 
-num = int(input('Введите число = длине списка - '))
+num = int(input('Enter a number equal to the length of the list: '))
 
 
 def mult_list_elements(data: list):
@@ -47,7 +46,7 @@ print(mult_list_elements(spisok))
 float_list_number = [1.1, 1.2, 3.1, 5.567, 10.003]
 
 
-def separation_of_integer_and_fraction(data: list):
+def separation_of_fraction(data: list):
     frac_num = []
     for i in data:
         sep = i % 1
@@ -67,13 +66,13 @@ def dif_max_min_num(data: list):
     return res
 
 
-lst_num = separation_of_integer_and_fraction(float_list_number)
+lst_num = separation_of_fraction(float_list_number)
 
-print(dif_max_min_num(lst_num))
+print('The difference between the maximum and minimum value of the fractional part of the elements -', dif_max_min_num(lst_num))
 
 # 4.Напишите программу, которая будет преобразовывать десятичное число в двоичное. *Пример:* 45 -> 101101
 
-num = int(input('Введите число - '))
+num = int(input('Enter a number: '))
 
 
 def convert_num_in_binary(n):
@@ -84,12 +83,12 @@ def convert_num_in_binary(n):
     return str(n) + bin
 
 
-print(convert_num_in_binary(num))
+print(f'Number {num} in binary:', convert_num_in_binary(num))
 
 # 5.Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
 # Пример: для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 
-num = int(input('Введите число - '))
+num = int(input('Enter a number: '))
 
 
 def fibonachi(n):
