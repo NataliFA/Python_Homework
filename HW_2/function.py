@@ -1,4 +1,8 @@
-# Проверка на число
+# # Проверка на число
+
+# from function import checking_for_a_number
+
+# n = str(checking_for_a_number('введите число: '))
 
 def checking_for_a_number(text):
 
@@ -23,7 +27,8 @@ def checking_for_a_number(text):
             print("Error, incorrect number!")
     return number
 
-checking_for_a_number(-125)
+
+checking_for_a_number(15+549)
 
 
 # def is_number(str):
