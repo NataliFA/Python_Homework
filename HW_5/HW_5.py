@@ -14,9 +14,7 @@ def del_text(s: str, text: str):
     words = s.replace(text, '1')
     word_list = list(map(str, words.split()))
     l = [word for word in word_list for i in word if i.isdigit()]
-    # word_list1 = [word_list.remove(i) for i in l]
-    for i in l:
-        word_list.remove(i)
+    word_list1 = [word_list.remove(i) for i in l]
     return (' '.join(word_list))
 
 
@@ -25,11 +23,11 @@ print(del_text(sentence, 'абв'))
 # с семинара:
 
 
-def filter_text(text):
-    # text = text.split()
-    # func = lambda word: 'абв' not in word
-    # return ' '.join(list(filter(func, text)))
-    return ' '.join(list(filter(lambda word: 'абв' not in word, text.split())))
+# def filter_text(text):
+#     # text = text.split()
+#     # func = lambda word: 'абв' not in word
+#     # return ' '.join(list(filter(func, text)))
+#     return ' '.join(list(filter(lambda word: 'абв' not in word, text.split())))
 
 
 # print(filter_text(sentence))

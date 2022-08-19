@@ -52,9 +52,14 @@ def bot_turn(complication, candies):
         time.sleep(0.9)
         return bot_turn
     else:
-        bot_turn = candies % 29
-        if bot_turn == 0:
-            bot_turn += 1
+        if candies == 29:
+            bot_turn = 28
+        elif candies <= 28:
+            bot_turn = candies - 1
+        elif candies % 29 == 0:
+            bot_turn = 27
+        else:
+            bot_turn = candies % 29
         print(f'\nКоварный умный бот берет со стола {bot_turn} конфет')
         time.sleep(0.9)
         return bot_turn
@@ -107,7 +112,7 @@ def player_and_bot2(all_candies):
 
     lottery = random.choice([1, 2])
 
-    while all_candies > 0:  # режим 3 сработает, только если игрок заберет последнюю конфету и на столе останется 0 конфет, тогда комп выиграл
+    while all_candies != 1:
         if lottery == 1:
             print(
                 '\033[37m'f'{player}, сколько конфет Вы возьмете?''\033[0m', end=' ')
